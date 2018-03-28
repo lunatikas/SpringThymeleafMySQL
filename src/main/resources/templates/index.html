@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Index</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <p th:text="${labas}"></p>
+        <ul th:each="item : ${list}">
+            <li th:text="${item}"></li>
+        </ul>
+    </body>
+</html>
