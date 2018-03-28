@@ -5,9 +5,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     </head>
     <body>
-        <p th:text="${labas}"></p>
-        <ul th:each="item : ${list}">
-            <li th:text="${item}"></li>
+        <ul>
+            <li><a th:href="@{/students}">Studentų lentelė</a></li>
         </ul>
     </body>
 </html>
