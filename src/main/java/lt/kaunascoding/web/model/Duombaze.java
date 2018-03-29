@@ -38,4 +38,18 @@ public class Duombaze {
 
         return result;
     }
+
+    public void insertStudent(String name, String surname, String phone, String email) {
+        try {
+            PreparedStatement st  = _con.prepareStatement("INSERT INTO `kcs`.`students` (`id`, `name`, `surname`, `phone`, `email`) VALUES (NULL, ?, ?, ?, ?);");
+            st.setString(1,name);
+            st.setString(2,surname);
+            st.setString(3,phone);
+            st.setString(4,email);
+            st.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

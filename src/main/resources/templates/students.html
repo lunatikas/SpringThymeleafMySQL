@@ -1,32 +1,62 @@
-<!DOCTYPE html>
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
->
+     >
 <head>
     <meta charset="UTF-8">
     <title>Studentai</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Studentai</h1>
-
-    <table>
-        <thead>
-            <td>id</td>
-            <td>name</td>
-            <td>surname</td>
-            <td>phone</td>
-            <td>email</td>
-        </thead>
-        <tbody>
-            <tr th:each="row : ${list}">
-                <td th:text="${row.id}"></td>
-                <td th:text="${row.name}"></td>
-                <td th:text="${row.surname}"></td>
-                <td th:text="${row.phone}"></td>
-                <td th:text="${row.email}"></td>
+<div class="container">
+    <form method="POST" action="#" th:action="@{/students}" th:object="${studentForm}">             
+        <table>                
+            <tr>
+                <td><label>Name</label></td><td><input th:field="*{name}"/></td>
             </tr>
-        </tbody>
-    </table>
+                            
+            <tr>
+                <td><label>Surname</label></td><td><input th:field="*{surname}" type="text"/></td>                
+            </tr>
+                            
+            <tr>                
+                <td><label>Phone</label></td><td><input th:field="*{phone}" type="text"/></td>                
+            </tr>
+                   
+            <tr>
+                <td><label>Email</label></td><td><input th:field="*{email}" type="text"/></td>                
+            </tr>
+                     
+            <tr>
+                <td><input type="submit" value="Submit"/></td>                
+            </tr>
+        </table>
+    </form>
+</div>
+
+<h1>Studentai</h1>
+<h3 th:text="${gautasVardas}">Kintamasis</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>phone</th>
+        <th>email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row : ${list}">
+        <td th:text="${row.id}"></td>
+        <td th:text="${row.name}"></td>
+        <td th:text="${row.surname}"></td>
+        <td th:text="${row.phone}"></td>
+        <td th:text="${row.email}"></td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
