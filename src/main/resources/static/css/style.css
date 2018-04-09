@@ -1,0 +1,57 @@
+.logo{
+text-align:center;
+
+padding:20px;
+
+border:1px solid grey;
+border-radius:60px;
+}
+.nuotrauka{
+ background-color: white;
+    background-image: url("../images/holi.gif");
+    background-size:cover;
+padding:30px;
+ height: 500px;
+ color:white;
+
+
+}
+input[type=text],input[type=number] {
+color:black;
+width:100%;
+}
+.mygtukas {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.mygtukas img {
+    width: 100%;
+    height: auto;
+}
+
+.mygtukas .btn {
+    position: absolute;
+    top: 50%;
+    left: 250%;
+    transform: translate(-50%, 49%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 15px;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.mygtukas .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+
